@@ -55,7 +55,6 @@
 | ascent | 上り(獲得標高) |
 | descent | 下り(累積下降量) |
 | smooth | 平滑化 |
-| generation | 世代番号(古い取得結果を破棄するための番号) |
 | summary | サマリー |
 | chart | 断面図(グラフ) |
 | reset | リセット |

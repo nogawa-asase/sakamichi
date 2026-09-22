@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ルート標高断面図ツール</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>ルート標高断面図ツール</h1>
+  </header>
+
+  <main class="app-main">
+    <section class="map-section">
+      <div id="map" class="map-container" aria-label="地図(クリックでルートを作成)"></div>
+    </section>
+
+    <section class="chart-section">
+      <div class="chart-header">
+        <h2>標高断面図</h2>
+        <p id="loading-indicator" class="loading-indicator" hidden>標高を取得中です…</p>
+        <p id="out-of-range-notice" class="out-of-range-notice" hidden>
+          対象外エリア(データのない地点)を含むルートです。該当区間は断面図が途切れて表示されます。
+        </p>
+      </div>
+      <div class="chart-canvas-wrapper">
+        <canvas id="elevation-chart" aria-label="標高断面図(横軸: 累積距離、縦軸: 標高)"></canvas>
+      </div>
+    </section>
+
+    <section class="summary-section">
+      <dl class="summary-list">
+        <div class="summary-item">
+          <dt>総距離</dt>
+          <dd id="summary-distance">0.0 km</dd>
+        </div>
+        <div class="summary-item">
+          <dt>総上り</dt>
+          <dd id="summary-ascent">0 m</dd>
+        </div>
+        <div class="summary-item">
+          <dt>総下り</dt>
+          <dd id="summary-descent">0 m</dd>
+        </div>
+      </dl>
+      <div class="button-row">
+        <button id="undo-button" type="button">1つ戻す</button>
+        <button id="reset-button" type="button">リセット</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      地図・標高データ:
+      <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener noreferrer"
+        >国土地理院</a
+      >
+    </p>
+  </footer>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://unpkg.com/chart.js@4.4.4/dist/chart.umd.js"
+    integrity="sha384-G436+Z2nlA8+PNoeRvWdxKbvOf8E/y+lYxqht2iBwNHTQDV5CJr3+AGVj8fGZi5t"
+    crossorigin="anonymous"
+  ></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
