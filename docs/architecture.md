@@ -35,8 +35,10 @@
 - バージョン管理: Git(GitHubリポジトリ)
 - デプロイ方法: GitHub Pages(`main` ブランチのリポジトリルートを公開元に設定。
   詳細は `repository-structure.md` を参照)
-- ローカル確認: 簡易HTTPサーバー(例: `python3 -m http.server`、またはVS Codeの「Live Server」拡張機能)を利用する。
+- ローカル確認: 簡易HTTPサーバー(`npx serve .`、またはVS Codeの「Live Server」拡張機能)を利用する。
   ES Modulesは `file://` では読み込めないため、`index.html` を直接開く方法は使わない
+  (本devcontainerには最小構成のPythonのみが入っており `python3 -m http.server` は使えないため、
+  Node標準で使える `npx serve` を基本とする)
 - リント: `npm run lint`(ESLint)
 - 型チェック: `npm run typecheck`(`tsc --noEmit`)
 - コード変更後は必ずリント・型チェックを実施し、エラーがない状態でコミットする

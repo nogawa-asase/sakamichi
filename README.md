@@ -5,7 +5,7 @@
 インストールや会員登録は不要で、ブラウザだけで使えます。
 
 - 対象エリア: 日本国内
-- 公開URL: (初回実装の公開後に追記)
+- 公開URL: https://nogawa-asase.github.io/sakamichi/
 
 ## 使い方
 
@@ -18,7 +18,7 @@
 ES Modulesを使っているため、`index.html` を直接開くのではなく、簡易HTTPサーバー経由で開きます。
 
 ```bash
-python3 -m http.server 8000
+npx --yes serve -l 8000 .
 # ブラウザで http://localhost:8000/ を開く
 ```
 

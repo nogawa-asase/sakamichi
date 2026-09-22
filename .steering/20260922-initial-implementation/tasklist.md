@@ -145,10 +145,13 @@
 
 ## 10. 公開・仕上げ
 
-- [ ] `npm run lint` / `npm run typecheck` をエラーなく通す
-- [ ] GitHub Pagesの公開設定(リポジトリルート/mainブランチ)を行う(リポジトリ所有者が実施)
-- [ ] 公開URLでの動作確認
-- [ ] `README.md` に公開URLを追記
-- [ ] `.steering/20260922-initial-implementation/` の内容を最新化してコミット
+- [x] `npm run lint` / `npm run typecheck` をエラーなく通す
+- [x] GitHub Pagesの公開設定(リポジトリルート/mainブランチ)を行う(リポジトリ所有者が実施)
+      (ユーザーがSettings > Pagesで設定。公開URL: https://nogawa-asase.github.io/sakamichi/)
+- [x] 公開URLでの動作確認
+      (Playwrightで公開URLに対し、地図クリック→標高取得→断面図/サマリー更新→1つ戻す→
+      リセットの一連の流れを実行し、ページエラー・読み込み失敗なく動作することを確認した)
+- [x] `README.md` に公開URLを追記
+- [x] `.steering/20260922-initial-implementation/` の内容を最新化してコミット
 
 **完了条件**: requirements.mdの「GitHub Pages上の公開URLで動作する」を満たし、プロダクトの成功の定義を達成する
