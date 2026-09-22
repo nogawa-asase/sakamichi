@@ -247,6 +247,6 @@ graph TD
 - `.steering/` のディレクトリ名は日付と開発タイトルで明確に識別できるようにする
 - 永続的ドキュメントと作業単位のドキュメントを混同しない
 - コード変更後は必ずリント・型チェックを実施する
-- 本プロジェクトはcanvasゲームのため、Tailwind CSSなどのCSSフレームワークは使わない（`docs/development-guidelines.md`参照）
+- Tailwind CSSなどのCSSフレームワークは使わない（`docs/development-guidelines.md`参照）
 - セキュリティを考慮したコーディング（XSS対策、入力バリデーションなど）
 - 図表は必要最小限に留め、メンテナンスコストを抑える
